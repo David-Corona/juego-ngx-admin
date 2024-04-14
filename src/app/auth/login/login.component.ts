@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, Inject  } from '@angular/core';
-import { NB_AUTH_OPTIONS, NbAuthService, NbLoginComponent } from '@nebular/auth';
+import { NB_AUTH_OPTIONS, NbAuthResult, NbAuthService, NbLoginComponent } from '@nebular/auth';
 import { UsuarioLogin } from '../auth.model';
 import { AuthService } from '../auth.service';
 import { NbToastrService } from '@nebular/theme';
@@ -42,4 +42,27 @@ export class LoginComponent extends NbLoginComponent {
       });
   }
 
+  // login(): void {
+  //   this.errors = [];
+  //   this.messages = [];
+  //   this.submitted = true;
+
+  //   this.authService.authenticate(this.strategy, this.user).subscribe((result: NbAuthResult) => {
+  //     this.submitted = false;
+
+  //     if (result.isSuccess()) {
+  //       this.messages = result.getMessages();
+  //     } else {
+  //       this.errors = result.getErrors();
+  //     }
+
+  //     const redirect = result.getRedirect();
+  //     if (redirect) {
+  //       setTimeout(() => {
+  //         return this.router.navigateByUrl(redirect);
+  //       }, this.redirectDelay);
+  //     }
+  //     this.cd.detectChanges();
+  //   });
+  // }
 }

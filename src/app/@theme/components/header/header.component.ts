@@ -47,17 +47,17 @@ export class HeaderComponent implements OnInit, OnDestroy {
               private userService: UserData,
               private layoutService: LayoutService,
               private breakpointService: NbMediaBreakpointsService,
-              private authService: NbAuthService)
-  {
-    this.authService.onTokenChange()
-      .subscribe((token: NbAuthJWTToken) => {
-        console.log("authService.onTokenChange(), token: ", token);
-        if (token.isValid()) {
-          this.user = token.getPayload(); // here we receive a payload from the token and assigns it to our `user` variable
-          console.log("Token is valid, user: ", this.user); // TODO - token.payload is null
-        }
-        console.log("Token is not valid");
-      });
+              // private authService: NbAuthService
+  ) {
+    // this.authService.onTokenChange()
+    //   .subscribe((token: NbAuthJWTToken) => {
+    //     console.log("authService.onTokenChange(), token: ", token);
+    //     if (token.isValid()) {
+    //       this.user = token.getPayload(); // here we receive a payload from the token and assigns it to our `user` variable
+    //       console.log("Token is valid, user: ", this.user); // TODO - token.payload is null
+    //     }
+    //     console.log("Token is not valid");
+    //   });
   }
 
   ngOnInit() {

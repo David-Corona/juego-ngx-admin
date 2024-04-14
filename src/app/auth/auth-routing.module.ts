@@ -12,7 +12,7 @@ import { LogoutComponent } from './logout/logout.component';
 export const routes: Routes = [
   {
     path: '',
-    component: NbAuthComponent,
+    component: NbAuthComponent, // TODO - Remove when auth components aren't extending nebular components
     children: [
       {
         path: '',
