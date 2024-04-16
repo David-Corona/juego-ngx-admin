@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { NbAuthJWTToken, NbAuthModule, NbOAuth2AuthStrategy, NbPasswordAuthStrategy, NbPasswordAuthStrategyOptions, getDeepFromObject } from '@nebular/auth';
 import { NbAlertModule, NbButtonModule, NbCheckboxModule, NbInputModule } from '@nebular/theme';
 
-import { NgxAuthRoutingModule } from './auth-routing.module';
+import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RequestPasswordComponent } from './request-password/request-password.component';
@@ -24,7 +24,7 @@ import { HttpErrorResponse } from '@angular/common/http';
     NbInputModule,
     NbButtonModule,
     NbCheckboxModule,
-    NgxAuthRoutingModule,
+    AuthRoutingModule,
 
     // TODO
     // NbAuthModule.forRoot({

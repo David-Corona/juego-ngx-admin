@@ -1,15 +1,10 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+
+
 import { authGuard } from './auth/guards/auth.guards';
 import { noAuthGuard } from './auth/guards/no-auth.guard';
-// import {
-//   NbAuthComponent,
-//   NbLoginComponent,
-//   NbLogoutComponent,
-//   NbRegisterComponent,
-//   NbRequestPasswordComponent,
-//   NbResetPasswordComponent,
-// } from '@nebular/auth';
+
 
 
 export const routes: Routes = [
@@ -23,36 +18,12 @@ export const routes: Routes = [
     canActivate: [noAuthGuard],
     loadChildren: () => import('./auth/auth.module').then(m => m.NgxAuthModule),
   },
-  // {
-  //   path: 'auth',
-  //   component: NbAuthComponent,
-  //   children: [
-  //     {
-  //       path: '',
-  //       component: NbLoginComponent,
-  //     },
-  //     {
-  //       path: 'login',
-  //       component: NbLoginComponent,
-  //     },
-  //     {
-  //       path: 'register',
-  //       component: NbRegisterComponent,
-  //     },
-  //     {
-  //       path: 'logout',
-  //       component: NbLogoutComponent,
-  //     },
-  //     {
-  //       path: 'request-password',
-  //       component: NbRequestPasswordComponent,
-  //     },
-  //     {
-  //       path: 'reset-password',
-  //       component: NbResetPasswordComponent,
-  //     },
-  //   ],
-  // },
+  {
+    path: 'users',
+    // canActivate: [authGuard],
+    loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule),
+  },
+
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
   { path: '**', redirectTo: 'pages' },
 ];
