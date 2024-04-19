@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-
-import { NbAlertModule, NbButtonModule, NbCheckboxModule, NbInputModule } from '@nebular/theme';
+// TODO - Export?
+import { NbCardModule, NbAlertModule, NbButtonModule, NbCheckboxModule, NbInputModule } from '@nebular/theme';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { UsersRoutingModule } from './users-routing.module';
 import { UsersListComponent } from './users-list/users-list.component';
@@ -13,17 +14,17 @@ import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   imports: [
+    UsersRoutingModule,
     CommonModule,
     FormsModule,
     RouterModule,
+
     NbAlertModule,
     NbInputModule,
     NbButtonModule,
     NbCheckboxModule,
-    UsersRoutingModule,
-
-
-
+    NbCardModule,
+    Ng2SmartTableModule
   ],
   declarations: [
     UsersListComponent,

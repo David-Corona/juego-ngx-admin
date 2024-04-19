@@ -1,3 +1,5 @@
+
+// TODO - Check necessary
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -20,6 +22,7 @@ import { AuthInterceptor } from './auth/auth-interceptor';
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    // TODO - Check:
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,

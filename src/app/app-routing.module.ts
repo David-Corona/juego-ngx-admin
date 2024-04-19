@@ -19,9 +19,9 @@ export const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then(m => m.NgxAuthModule),
   },
   {
-    path: 'users',
+    path: 'modules',
     // canActivate: [authGuard],
-    loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule),
+    loadChildren: () => import('./modules/modules.module').then(m => m.ModulesModule),
   },
 
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
